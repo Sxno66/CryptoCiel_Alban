@@ -11,7 +11,21 @@ int main()
 	HashGestion LM;
 	std::string file = "sxno.txt";
 	std::cout << LM.CalculateFileSHA256(file) << std::endl;
+
+	AesGestion Hibou;
+	Hibou.GenerateAESKey();
+	Hibou.SaveAESKeyToFile("aes_random.key");
+	Hibou.EncryptFileAES256("sxno.txt", "sxnoencrypt.txt");
+	Hibou.DecryptFileAES256("sxnoencrypt.txt", "sxnodecrypt.txt");
+
+
+	Hibou.LoadAESKeyFromFile();
+	Hibou.DecryptFileAES256();
+
+
 	return 0;
+
 }
+
 
 
