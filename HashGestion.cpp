@@ -1,5 +1,6 @@
 #include "HashGestion.h"
 
+
 HashGestion::HashGestion()
 {
 	std::cout << "Constructeur par defautl du Hash" << std::endl;
@@ -30,7 +31,7 @@ std::string  HashGestion::CalculateFileSHA256(const std::string& filename)
     std::string hashFile;
 
     std::ifstream file(filename, std::ios::binary);
-
+ 
     if (!file)
     {
         std::cerr << "Impossible d'ouvrir le fichier." << std::endl;

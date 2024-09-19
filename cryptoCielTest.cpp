@@ -19,9 +19,18 @@ int main()
 	Hibou.DecryptFileAES256("sxnoencrypt.txt", "sxnodecrypt.txt");
 
 
-	Hibou.LoadAESKeyFromFile();
-	Hibou.DecryptFileAES256();
+	/*Hibou.LoadAESKeyFromFile("");
+	Hibou.DecryptFileAES256(""); */
 
+
+	RsaGestion tiktak;
+	tiktak.generationClef("sxno3.pem", "sxno2.pem", 2048);
+	tiktak.chargementClefsPrive("sxno3.pem");
+	tiktak.chargementClefsPublic("sxno2.pem");
+	tiktak.chiffreDansFichier("message", "sxnoF.txt");
+	tiktak.dechiffreFichier("sxnoF.txt");
+
+	
 
 	return 0;
 
