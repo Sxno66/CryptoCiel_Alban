@@ -24,12 +24,12 @@ int main()
 
 
 	RsaGestion tiktak;
-	tiktak.generationClef("sxno3.pem", "sxno2.pem", 2048);
-	tiktak.chargementClefsPrive("sxno3.pem");
-	tiktak.chargementClefsPublic("sxno2.pem");
-	tiktak.chiffreDansFichier("message", "sxnoF.txt");
-	tiktak.dechiffreFichier("sxnoF.txt");
-
+	tiktak.generationClef("Alban_ClefPublic.pem", "Alban_ClefPrivate.pem", 2048);
+	tiktak.chargementClefsPrive("Alban_ClefPrivate.pem");
+	tiktak.chargementClefsPublic("PUBLIC.pem");
+	tiktak.chiffreDansFichier("01101101", "sxnoF.txt");
+	
+	
 	
 
 	return 0;
